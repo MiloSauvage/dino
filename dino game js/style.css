@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:  sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container{
+    height: 400px;
+    width: 1200px;
+    position: relative;
+    overflow: hidden;
+    background: url(./pictures/fond.jpg);
+}
+
+/* dinosaure */
+.dino{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    bottom: 36px;
+    left: 20px;
+}
+
+.dino img{
+    height: 70px;
+    width: 70px;
+}
+
+.dinoActive{
+    animation: animDino 0.6s linear infinite;
+}
+
+@keyframes animDino{
+    0%{
+        bottom: 26px;
+    }
+    45%,55%{
+        bottom: 168px;
+    }
+}
+
+
+/* nuage 1 */
+.cloud{
+    height: 80px;
+    width: 125px;
+    position: absolute;
+    bottom: 200px;
+    right: -150px;
+}
+
+.cloud img{
+    height: 80px;
+    width: 125px;
+}
+
+.cloudActive{
+    animation: animCloud 6s linear infinite;
+}
+
+@keyframes animCloud{
+    0%{
+        right: -20px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+/* nuage 2 */
+.cloud1{
+    height: 80px;
+    width: 125px;
+    position: absolute;
+    bottom: 200px;
+    right: -150px;
+}
+
+.cloud1 img{
+    height: 80px;
+    width: 125px;
+}
+
+.cloudActive1{
+    animation: animCloud 8s linear infinite;
+}
+
+@keyframes animCloud{
+    0%{
+        right: -100px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+/* obstacle */
+.obstacle{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 36px;
+    right: -80px;
+}
+.obstacle img{
+    height: 70px;
+    width: 70px;
+}
+
+.obstacleActive{
+    animation: animObstacle 3s linear infinite;
+}
+
+@keyframes animObstacle{
+    0%{
+        right: -20px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+/* score */
+.score{
+    height: auto;
+    width: auto;
+    position: absolute;
+    top:  20px;
+    right: 20px;
+}
+
+/* gameOver */
+.gameOver{
+    display: none;
+    font-size: 70px;
+    position: absolute;
+    left: calc(50% - 181px);
+    top: calc(51% - 40px);
+    height: 80px;
+    width: 362px;
+    color: gray;
+
+}
